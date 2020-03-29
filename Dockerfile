@@ -1,4 +1,6 @@
 ARG DOCKER_TAG
 FROM node:$DOCKER_TAG
 
+RUN node -v
+
 RUN echo ${DOCKER_TAG}
