@@ -1,9 +1,5 @@
 #!/bin/bash
 
-echo ${SOURCE_BRANCH}
+NODE_VERSION=$(echo $DOCKER_TAG | cut -d "-" -f2)
 
-echo ${DOCKER_REPO}
-
-echo ${DOCKERFILE_PATH}
-
-docker build . --build-arg DOCKER_TAG=${DOCKER_TAG} -t ${IMAGE_NAME}
+docker build . --build-arg NODE_VERSION=${NODE_VERSION} -t ${IMAGE_NAME}
