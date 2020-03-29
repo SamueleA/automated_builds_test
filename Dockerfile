@@ -1,1 +1,1 @@
-FROM node:${DOCKER_TAG}
+FROM node:$DOCKER_TAG
